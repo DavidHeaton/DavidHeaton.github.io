@@ -48,6 +48,27 @@ header {
     text-align: left;
 }
 
+#characters-container {
+    display: flex;
+    flex-direction:column;
+    width: 90%;
+    background: rgba(0, 0, 0, 0.6);
+    border: 3px solid #555555;
+    border-radius: 10px;
+}
+
+#characters-container button{
+    background-color: #333333;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 .text-container {
     width: 90%;
     background: rgba(0, 0, 0, 0.6);
