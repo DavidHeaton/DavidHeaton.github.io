@@ -1,20 +1,23 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    text-align: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #121212;
     color: #ffffff;
+    max-width: 1200px; /* Set a reasonable maximum width */
 }
 
 header {
-    width: 100%;
-    position: sticky;
+    display: flex;
+    position: fixed;
     top: 0;
-    z-index:1000;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background-color: #1e1e1e; /* Ensure the background color covers the entire header */
 }
 
 .finn-image img {
@@ -23,6 +26,7 @@ header {
     object-fit: cover;
     border-radius: 10%;
     border: 3px solid #4682b4;
+    margin-bottom: 5px;
 }
 
 .page-heading {
@@ -36,7 +40,6 @@ header {
 
 .page-heading h1 {
     text-align: center; 
-    
 }
 
 .container {
@@ -56,14 +59,29 @@ header {
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    text-align: left;
 }
 
 .text-container p {
     color: #ffffff;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.text-container h2 {
+    color: #4682b4;
+    text-align: center;
+}
+
+.highlight-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background: rgba(5, 88, 59, 0.6);
+    border-radius: 10px;
+    border: 3px solid #555555;
+    margin: 10px auto;
 }
 
 h1 {
@@ -79,6 +97,7 @@ h1 {
     border-radius: 10px;
     border: 3px solid #555555;
     margin-bottom: 10px;
+    overflow-x: auto; /* Add horizontal scroll if content overflows */
 }
 
 .character-title {
@@ -93,8 +112,7 @@ p {
     line-height: 1.6;
 }
 
-
-/* Navigation Bar*/
+/* Navigation Bar */
 .navbar {
     background-color: #1e1e1e;
     padding: 10px 10px;
@@ -123,27 +141,56 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 100px; /* Adjust this value based on the height of your navbar */
 }
 
 .styled-table {
-    width: 100%;
     border-collapse: collapse;
     margin: 25px 25px;
     font-size: 18px;
     text-align: center;
     color: #ccc;
     background-color: #222;
+    width: 100%; /* Ensure the table takes up the full width of its container */
+    max-width: 100%; /* Ensure the table fits within its parent element */
+    table-layout: fixed; /* Ensure the table scales to fit inside its parent */
 }
 
 .styled-table th, .styled-table td {
-    padding: 12px 15px;
+    padding: 2px 4px; /* Reduce padding to fit text within cells */
     border: 1px solid #444;
+    word-wrap: break-word; /* Ensure long words break to fit within the cell */
+    font-size: 0.8em; /* Scale the text to fit within the cells */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Media queries to adjust text size and padding dynamically */
+@media (max-width: 1200px) {
+    .styled-table th, .styled-table td {
+        padding: 3px 5px;
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 800px) {
+    .styled-table th, .styled-table td {
+        padding: 2px 4px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 600px) {
+    .styled-table th, .styled-table td {
+        padding: 1px 3px;
+        font-size: 0.65em;
+    }
 }
 
 .styled-table th {
     background-color: #333;
     color: #fff;
+    white-space: nowrap; /* Prevent text from wrapping */
+    width: 100px; /* Set a fixed width for the headings */
 }
 
 .styled-table tr:nth-child(even) {
@@ -164,7 +211,7 @@ main {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin:5px
+    margin: 5px;
 }
 
 .button:hover {

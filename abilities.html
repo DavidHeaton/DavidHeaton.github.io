@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Finn Underbough</title>
+        <title>Abilites</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -20,104 +20,84 @@
             </div>
             <div class="text-container">
                 <h2>Ability Scores</h2>
-                <p> The six abilites provide a quick description of every creature's physical and mental characteristics</p>
+                <p> The six abilities provide a quick description of every creature's physical and mental characteristics</p>
                 <ul>
                     <li>Strength - Measuring physical power</li>
                     <li>Dexterity - Measuring Agility</li>
                     <li>Constitution - Measuring endurance</li>
-                    <li>Intelligence - Measuring reasoning nd memory</li>
+                    <li>Intelligence - Measuring reasoning and memory</li>
                     <li>Wisdom - Measuring perception and insight</li>
                     <li>Charisma - Measuring force of personality</li>
                 </ul>
-                <p> A score of 10 or 11 is the normal human average. Adventurers score can be as high as 20, monsters and divine beings can have scores as high as 30.</p>
+                <p> A score of 10 or 11 is the normal human average. Adventurers' score can be as high as 20, monsters and divine beings can have scores as high as 30.</p>
             </div>
             <div class="text-container">
                 <h2>Ability Modifiers</h2>
-                <p>Each ability has a modifier. This is calculated from the ability score and can range from between -5 to + 10</p>
+                <p>Each ability has a corresponding modifier. This is calculated from the ability score and typically range from between -5 to + 10</p>
             </div>
             <div class="table-container">
                 <table class="styled-table">
                     <tr>
-                        <th colspan="2">Ability Modifiers</th>
-                    </tr>
-                    <tr>
                         <th>Score</th>
-                        <th>Modifier</th>
-                    </tr>
-                    <tr>
                         <td>1</td>
-                        <td>-5</td>
-                    </tr>
-                    <tr>
                         <td>2-3</td>
-                        <td>-4</td>
-                    </tr>
-                    <tr>
                         <td>4-5</td>
-                        <td>-3</td>
-                    </tr>
-                    <tr>
                         <td>6-7</td>
-                        <td>-2</td>
-                    </tr>
-                    <tr>
                         <td>8-9</td>
-                        <td>-1</td>
-                    </tr>
-                    <tr>
                         <td>10-11</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
                         <td>12-13</td>
-                        <td>+1</td>
-                    </tr>
-                    <tr>
                         <td>14-15</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
                         <td>16-17</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
                         <td>18-19</td>
-                        <td>+4</td>
-                    </tr>
-                    <tr>
                         <td>20-21</td>
-                        <td>+5</td>
-                    </tr>
-                    <tr>
                         <td>22-23</td>
-                        <td>+6</td>
-                    </tr>
-                    <tr>
                         <td>24-25</td>
-                        <td>+7</td>
-                    </tr>
-                    <tr>
                         <td>26-27</td>
-                        <td>+8</td>
-                    </tr>
-                    <tr>
                         <td>28-29</td>
-                        <td>+9</td>
+                        <td>30</td>
                     </tr>
                     <tr>
-                        <td>30</td>
+                        <th>Modifier</th>
+                        <td>-5</td>
+                        <td>-4</td>
+                        <td>-3</td>
+                        <td>-2</td>
+                        <td>-1</td>
+                        <td>0</td>
+                        <td>+1</td>
+                        <td>+2</td>
+                        <td>+3</td>
+                        <td>+4</td>
+                        <td>+5</td>
+                        <td>+6</td>
+                        <td>+7</td>
+                        <td>+8</td>
+                        <td>+9</td>
                         <td>+10</td>
                     </tr>
                 </table>
             </div>
             <div class="text-container" id="ability-checks">
                 <h2>Ability Checks - rolling dice</h2>
-                <p>When a character tries to perform an action that has a chance of failure, they make an ability check. To make an ability check, roll a d20 and add the relevant ability modifier.</p>
-
-                <p>For example, to climb a wall, a character makes a Strength (Athletics) check. To notice a hidden monster, a character makes a Wisdom (Perception) check.</p>
-
-                <p>For example if you have a Constitution ability score of 15, your ability modifier for Constitution is +2. You roll a d20 for the check and get a 13. You then add the modifer to get a total of 15.</p>
+                <div class="highlight-container">
+                    <ul>
+                        <li>Roll a d20</li>
+                        <li>Add the relevant ability modifier</li>
+                        <li>Add your proficiency bonus if relevant</li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="text-container">
+                <h2>Skill Checks - Rolling Dice</h2>
+                <div class="highlight-container" id="skill-checks">
+                    <ul>
+                        <li>Roll a d20</li>
+                        <li>Add the relevant ability modifier</li>
+                        <li>Add your proficiency bonus if relevant</li>
+                    </ul>
+            </div>
+        
         </main>
     </body>
 </html>
