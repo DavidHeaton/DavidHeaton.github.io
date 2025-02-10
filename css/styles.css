@@ -168,6 +168,26 @@ button:hover {
     margin-right: 10px;
 }
 
+.small-button {
+    height: 1.125rem; /* Match the height of h2 */
+    width: 1.125rem; /* Make the button square */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    margin-left: 10px;
+    background-color: #bb86fc; /* Accent color */
+    color: #121212; /* Dark text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.small-button:hover {
+    background-color: #9b6bcc; /* Darker accent color on hover */
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     body {

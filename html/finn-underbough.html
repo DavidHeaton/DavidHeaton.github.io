@@ -14,9 +14,26 @@
         <img src="../images/FinnImage.png" alt="Finn Underbough">
     </section>
 
+    <!-- Navigation Buttons -->
+    <section class="navigation-buttons" id="navigation-buttons">
+        <h2>Navigation</h2>
+        <button class="button" onclick="location.href='../index.html'">Home</button>
+        <button class="button" onclick="document.getElementById('ability-scores').scrollIntoView()">Ability Scores</button>
+        <button class="button" onclick="document.getElementById('proficiency').scrollIntoView()">Proficiency</button>
+        <button class="button" onclick="document.getElementById('saving-throws').scrollIntoView()">Saving Throws</button>
+        <button class="button" onclick="document.getElementById('skills').scrollIntoView()">Skills</button>
+        <button class="button" onclick="document.getElementById('racial-traits').scrollIntoView()">Racial Traits</button>
+        <button class="button" onclick="document.getElementById('class-features').scrollIntoView()">Class Features</button>
+        <button class="button" onclick="document.getElementById('equipment').scrollIntoView()">Equipment</button>
+        <button class="button" onclick="document.getElementById('weapon-attack-instructions').scrollIntoView()">Weapon Attack Instructions</button>
+        <button class="button" onclick="document.getElementById('skill-checks').scrollIntoView()">Skill Checks</button>
+        <button class="button" onclick="document.getElementById('attacking-tips').scrollIntoView()">Attacking Tips</button>
+    </section>
+
     <!-- Ability Scores Section -->
-    <section>
-        <h2>Ability Scores:</h2>
+    <section id="ability-scores">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Ability Scores</h2>
+        
         <table class="stats">
             <thead>
                 <tr>
@@ -61,8 +78,8 @@
     </section>
 
     <!-- Proficiency Section -->
-    <section>
-        <h2>Proficiency:</h2>
+    <section id="proficiency">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Proficiency</h2>
         <div class="stats">
             <div><strong>Proficiency Bonus:</strong> +3</div>
             <div><strong>Armor Class:</strong> 15 (Leather Armor + DEX modifier)</div>
@@ -74,8 +91,8 @@
     </section>
 
     <!-- Saving Throws Section -->
-    <section>
-        <h2>Saving Throws:</h2>
+    <section id="saving-throws">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Saving Throws</h2>
         <table class="stats">
             <thead>
                 <tr>
@@ -113,8 +130,8 @@
     </section>
 
     <!-- Skills Section -->
-    <section>
-        <h2>Skills (Proficient and Expertise):</h2>
+    <section id="skills">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Skills (Proficient and Expertise)</h2>
         <div class="skills">
             <div><strong>Stealth:</strong> +8 (Expertise)</div>
             <div><em>Explanation:</em> Roll a d20, add your Dexterity modifier (+5) and double proficiency bonus (+6, expertise) to the result. This total is your Stealth check result.</div>
@@ -131,8 +148,8 @@
     </section>
 
     <!-- Racial Traits Section -->
-    <section>
-        <h2>Racial Traits (Lightfoot Halfling):</h2>
+    <section id="racial-traits">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Racial Traits (Lightfoot Halfling):</h2>
         <div class="stats">
             <div><strong>Halfling Luck:</strong> Reroll 1s on attack rolls, ability checks, or saving throws.</div>
             <div><strong>Naturally Stealthy:</strong> You can attempt to hide when you're lightly obscured by creatures larger than you.</div>
@@ -141,8 +158,8 @@
     </section>
 
     <!-- Class Features Section -->
-    <section>
-        <h2>Class Features (Rogue):</h2>
+    <section id="class-features">
+        <h2> <button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Class Features (Rogue)</h2>
         <article>
             <div><strong>Sneak Attack:</strong> 3d6</div>
             <div><strong>Cunning Action:</strong> Dash, Disengage, or Hide as a bonus action</div>
@@ -156,8 +173,8 @@
     </section>
 
     <!-- Equipment Section -->
-    <section>
-        <h2>Equipment:</h2>
+    <section id="equipment">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Equipment</h2>
         <div class="equipment">
             <div>Rapier</div>
             <div>Shortbow & 20 Arrows</div>
@@ -168,8 +185,8 @@
     </section>
 
     <!-- Weapon Attack Instructions -->
-    <section>
-        <h2>Weapon Attack Instructions:</h2>
+    <section id="weapon-attack-instructions">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Weapon Attack Instructions</h2>
             <div class="second-level-div">
                 <h3>Rapier (Finesse Weapon)</h3>
                 <div><strong>Attack Roll:</strong> Roll a d20 and add your Dexterity modifier (+5). Add your proficiency bonus (+3) if proficient. Compare the result to the target's AC. If it equals or exceeds the target’s AC, the attack hits.</div>
@@ -195,8 +212,8 @@
         </section>
 
     <!-- Skill Checks Section -->
-    <section>
-        <h2>Skill Checks:</h2>
+    <section id="skill-checks">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Skill Checks</h2>
         <div>
             <p>For each skill check, roll a d20 and add the appropriate modifiers. Proficiency bonus is added if you are proficient in the skill, and Expertise adds double your proficiency bonus if applicable.</p>
     
@@ -300,8 +317,8 @@
     </section>
 
     <!-- Things to Remember During Attacking Section -->
-    <section>
-        <h2>Things to Remember During Attacking:</h2>
+    <section id="attacking-tips">
+        <h2><button class="small-button" onclick="document.getElementById('navigation-buttons').scrollIntoView()">&#x2191;</button> Attacking Tiips</h2>
             <div class="second-level-div">
                 <h3>Did I Hit?</h3>
                 <p><strong>Roll a d20:</strong> To determine if you hit the target, roll a d20 and add your attack modifier (based on Strength or Dexterity, depending on the weapon). If you're proficient with the weapon, add your proficiency bonus.</p>
@@ -336,15 +353,5 @@
                 <p>When making a ranged attack, make sure you're within the weapon's range (normal or long range) and that there is nothing obstructing your line of sight.</p>
             </div>
     </section>
-
-    <!-- Notes Section -->
-    <section class="notes">
-        <h3>Notes:</h3>
-        <ul>
-            <li>Ensure all skills, abilities, and features are noted down for easy reference.</li>
-            <li>Keep track of any special effects, like the benefits of your "Halfling Luck" or "Lucky" feature.</li>
-        </ul>
-    </section>
-
 </body>
 </html>
