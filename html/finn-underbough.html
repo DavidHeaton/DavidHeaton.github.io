@@ -1,213 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Finn Underbough</title>
-        <link rel="stylesheet" href="../css/styles.css">
-    </head>
-    <body>
-        <header>
-            <div class="navbar">
-                <button onclick="location.href='../index.html'">Home</button>
-            </div>
-        </header>
-        <main>
-            <div class="page-heading">
-                <h1 class="character-title">Finn Underbough</h1>
-            </div>
-            <section class="horizontal-display">
-                <div class="image">
-                    <img src="../images/FinnImage.png" alt="An illustration of Finn Underbough">
-                </div>
-                <div>
-                    <p>A Lightfoot halfling rogue on a quest for freedom and redemption</p>
-                </div>
-            </section>
-            <div>
-                <h2>Race</h2>
-            </div>
-            <section class="horizontal-display">
-                <div class="compact-container">
-                    <h3>Hallfing</h3>
-                        <p><strong>Sub-race</strong>: Lightfoot</p>
-                        <p><strong>Age</strong>: 23</p>
-                        <p><strong>Height</strong>: 3' 6"</p>
-                        <p><strong>Speed</strong>: 25'</p>
-                </div>
-                <div class="compact-container">
-                    <h3>Race features</h3>
-                        <button class="compact-button" onclick="">Lucky</button>
-                        <button class="compact-button" onclick="">Brave</button>
-                        <button class="compact-button" onclick="">Halfling Nimbleness</button>
-                        <button class="compact-button" onclick="">Naturally Stealthy</button>
-                </div>
-            </section>
-            <div>
-                <h2>Proficiencies</h2>
-            </div>
-            <section class="horizontal-display">
-                <div class="compact-container">
-                    <h3>Proficiencies</h3>
-                    <p><strong>Proficiency at level 1</strong>: +2</p>
-                    <p><strong>Proficiency at level 6</strong>: +1</p>
-                    <p><strong>Total Proficiency</strong>: +3</p>
-                    <h3>Proficient in:</h3>
-                    <p>Dexterity</p>
-                    <p>Intelligence</p>
-                    <h3>Expertise in:</h3>
-                    <p>Acrobatics</p>
-                    <p>Perception</p>
-                    <p>Sleight of Hand</p>
-                    <p>Stealth</p>
-                </div>
-            </section>
-            <section class="horizontal-display">
-                <div class="compact-container">
-                    <h3>Class</h3>
-                    <p>Rogue</p>
-                    <p><strong>Hit Die</strong>: 1d8 per Rogue level</p>
-                    <p><strong>Hit Point Increase per level</strong>: 5 + Constitution modifier</p>
-                    <p><strong>Hit Points at level 6</strong>: 45</p>
-                </div>
-            </section>
-            <section class="horizontal-display">
-                <div class="compact-container">
-                    <h3>Class Features</h3>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn Underbough - Level 6 Rogue</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
 
-            <h2>Abilities</h2>
-            <section class="quarter-display">
-                <div class="compact-container">
-                    <h3>Base Scores</h3>
-                    <p><strong>Strength</strong>: 8</p>
-                    <p><strong>Dexterity</strong>: 15</p>
-                    <p><strong>Constitution</strong>: 14</p>
-                    <p><strong>Intelligence</strong>: 13</p>
-                    <p><strong>Wisdom</strong>: 10</p>
-                    <p><strong>Charisma</strong>: 12</p>
+    <!-- Heading Section -->
+    <section class="heading">
+        <h1>Finn Underbough - Level 6 Rogue</h1>
+        <img src="../images/FinnImage.png" alt="Finn Underbough">
+    </section>
+
+    <!-- Ability Scores Section -->
+    <section>
+        <h2>Ability Scores:</h2>
+        <table class="stats">
+            <thead>
+                <tr>
+                    <th>Ability</th>
+                    <th>Score</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Strength:</strong></td>
+                    <td>8</td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td><strong>Dexterity:</strong></td>
+                    <td>20</td>
+                    <td>+5</td>
+                </tr>
+                <tr>
+                    <td><strong>Constitution:</strong></td>
+                    <td>14</td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td><strong>Intelligence:</strong></td>
+                    <td>13</td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td><strong>Wisdom:</strong></td>
+                    <td>10</td>
+                    <td>+0</td>
+                </tr>
+                <tr>
+                    <td><strong>Charisma:</strong></td>
+                    <td>12</td>
+                    <td>+1</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Proficiency Section -->
+    <section>
+        <h2>Proficiency:</h2>
+        <div class="stats">
+            <div><strong>Proficiency Bonus:</strong> +3</div>
+            <div><strong>Armor Class:</strong> 15 (Leather Armor + DEX modifier)</div>
+            <div><strong>Initiative:</strong> +5 (DEX modifier)</div>
+            <div><strong>Speed:</strong> 25 ft.</div>
+            <div><strong>Hit Points:</strong> 43 (6d8 + 10)</div>
+
+        </div>
+    </section>
+
+    <!-- Saving Throws Section -->
+    <section>
+        <h2>Saving Throws:</h2>
+        <table class="stats">
+            <thead>
+                <tr>
+                    <th>Ability</th>
+                    <th>Modifier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Strength:</strong></td>
+                    <td>-1</td>
+                </tr>
+                <tr>
+                    <td><strong>Dexterity:</strong></td>
+                    <td>+5</td>
+                </tr>
+                <tr>
+                    <td><strong>Constitution:</strong></td>
+                    <td>+2</td>
+                </tr>
+                <tr>
+                    <td><strong>Intelligence:</strong></td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td><strong>Wisdom:</strong></td>
+                    <td>+0</td>
+                </tr>
+                <tr>
+                    <td><strong>Charisma:</strong></td>
+                    <td>+1</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+        <h2>Skills (Proficient and Expertise):</h2>
+        <div class="skills">
+            <div><strong>Stealth:</strong> +8 (Expertise)</div>
+            <div><em>Explanation:</em> Roll a d20, add your Dexterity modifier (+5) and double proficiency bonus (+6, expertise) to the result. This total is your Stealth check result.</div>
+
+            <div><strong>Perception:</strong> +5 (Expertise)</div>
+            <div><em>Explanation:</em> Roll a d20, add your Wisdom modifier (+0) and proficiency bonus (+3) to the result. This total is your Perception check result.</div>
+
+            <div><strong>Sleight of Hand:</strong> +8 (Expertise)</div>
+            <div><em>Explanation:</em> Roll a d20, add your Dexterity modifier (+5) and double proficiency bonus (+6, expertise) to the result. This total is your Sleight of Hand check result.</div>
+
+            <div><strong>Investigation:</strong> +4 (Expertise)</div>
+            <div><em>Explanation:</em> Roll a d20, add your Intelligence modifier (+1) and double proficiency bonus (+6, expertise) to the result. This total is your Investigation check result.</div>
+        </div>
+    </section>
+
+    <!-- Racial Traits Section -->
+    <section>
+        <h2>Racial Traits (Lightfoot Halfling):</h2>
+        <div class="stats">
+            <div><strong>Halfling Luck:</strong> Reroll 1s on attack rolls, ability checks, or saving throws.</div>
+            <div><strong>Naturally Stealthy:</strong> You can attempt to hide when you're lightly obscured by creatures larger than you.</div>
+            <div><strong>Lucky:</strong> Reroll 1s on the d20 for an attack roll, ability check, or saving throw.</div>
+        </div>
+    </section>
+
+    <!-- Class Features Section -->
+    <section>
+        <h2>Class Features (Rogue):</h2>
+        <article>
+            <div><strong>Sneak Attack:</strong> 3d6</div>
+            <div><strong>Cunning Action:</strong> Dash, Disengage, or Hide as a bonus action</div>
+            <div><strong>Uncanny Dodge:</strong> Halve damage from attacks you can see</div>
+            <div><strong>Roguish Archetype: Thief:</strong></div>
+            <ul>
+                <li><strong>Fast Hands:</strong> Use your bonus action to make a Dexterity (Sleight of Hand) check, use thieves' tools, or interact with an object</li>
+                <li><strong>Second-Story Work:</strong> Climb at your walking speed, and your jumping distance increases</li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Equipment Section -->
+    <section>
+        <h2>Equipment:</h2>
+        <div class="equipment">
+            <div>Rapier</div>
+            <div>Shortbow & 20 Arrows</div>
+            <div>Leather Armor (AC 15)</div>
+            <div>Two Daggers</div>
+            <div>Burglar's Pack</div>
+        </div>
+    </section>
+
+    <!-- Weapon Attack Instructions -->
+    <section>
+        <h2>Weapon Attack Instructions:</h2>
+            <div class="second-level-div">
+                <h3>Rapier (Finesse Weapon)</h3>
+                <div><strong>Attack Roll:</strong> Roll a d20 and add your Dexterity modifier (+5). Add your proficiency bonus (+3) if proficient. Compare the result to the target's AC. If it equals or exceeds the target’s AC, the attack hits.</div>
+                <div><strong>Damage Roll:</strong> On a hit, roll 1d8 for damage and add your Dexterity modifier (+5). 
                 </div>
-                <div class="compact-container">
-                    <h3>Improvements</h3>
-                    <p><strong>Strength</strong>: 0</p>
-                    <p><strong>Dexterity</strong>: +2 (Class)</p>
-                    <p><strong>Constitution</strong>: 0</p>
-                    <p><strong>Intelligence</strong>: 0</p>
-                    <p><strong>Wisdom</strong>: 0</p>
-                    <p><strong>Charisma</strong>: +1 (Class)</p>
-                </div>
-                <div class="compact-container">
-                    <h3>Final Scores</h3>
-                    <p><strong>Strength</strong>: 8</p>
-                    <p><strong>Dexterity</strong>: 17</p>
-                    <p><strong>Constitution</strong>: 14</p>
-                    <p><strong>Intelligence</strong>: 13</p>
-                    <p><strong>Wisdom</strong>: 10</p>
-                    <p><strong>Charisma</strong>: 13</p>
-                </div>
-                <div class="compact-container">
-                    <h3>Modifiers</h3>
-                    <p><strong>Strength</strong>: -1</p>
-                    <p><strong>Dexterity</strong>: +3</p>
-                    <p><strong>Constitution</strong>: +2</p>
-                    <p><strong>Intelligence</strong>: +1</p>
-                    <p><strong>Wisdom</strong>: 0</p>
-                    <p><strong>Charisma</strong>: +1</p>
-            </section>
-            <section class="vertical-display">
-                <h2>Initiative, AC and Saving Throws</h2>
-                <div class="compact-container">
-                    <p>Initiative: DEX modifier = <strong>+3</strong></p>
-                </div>
-                <div class="compact-container">
-                    <p>Armour Class: 12 + DEX modifier = <strong>17</strong></p>
-                </div>
-                <div class="compact-container">
-                    <p>Saving Throws</p>
-                    <ul>
-                        <p>Strength: -1</p>
-                        <p>Dexterity: +5</p>
-                        <p>Constitution: +6</p>
-                        <p>Intelligence: +4</p>
-                        <p>Wisdom: 0</p>
-                        <p>Charisma: +1</p>
-                    </ul>
-            </section>  
-            <h2>Skills</h2>
-            <section class="vertical-display">
-                <div class="compact-container">
-                    <h3>Skills</h3>
-                    <p><strong>Acrobatics</strong>: +5</p>
-                    <p><strong>Animal Handling</strong></p>
-                    <p><strong>Arcana</strong></p>
-                    <p><strong>Athletics</strong>: -1</p>
-                    <p><strong>Deception</strong>: +4</p>
-                    <p><strong>History</strong></p>
-                    <p><strong>Insight</strong>: +2</p>
-                    <p><strong>Intimidation</strong></p>
-                    <p><strong>Investigation</strong>: +4</p>
-                    <p><strong>Medicine</strong></p>
-                    <p><strong>Nature</strong></p>
-                    <p><strong>Perception</strong>: +2</p>
-                    <p><strong>Performance</strong></p>
-                    <p><strong>Persuasion</strong></p>
-                    <p><strong>Religion</strong></p>
-                    <p><strong>Sleight of Hand</strong>: +5</p>
-                    <p><strong>Stealth</strong>: +7</p>
-                    <p><strong>Survival</strong></p>
-                </div>
-            <h2>Weapons</h2>
-            <section class="vertical-display">
-                <div class="compact-container">
-                    <h3>Rapier</h3>
-                    <ul>
-                        <p>1d8 peircing damage</p>
-                        <p>Finesse property</p>
-                        <p>Melee Range</p>
-                    </ul>
-                </div>
-                <div class="compact-container">
-                    <h3>Shortbow</h3>
-                    <ul>
-                        <p>1d6 piercing damage</p>
-                        <p>Two-handed property</p>
-                        <p>Ammunation property</p>
-                        <p>Normal Range: 80 ft</p>
-                        <p>Long Range: 320 ft</p>
-                    </ul>
-                </div>
-                <div class="compact-container">
-                    <h3>Dagger</h3>
-                    <ul>
-                        <p>1d4 peircing damage</p>
-                        <p>Finesse property</p>
-                        <p>Light property</p>
-                        <p>Thrown property</p>
-                        <p>Normal Range: 20 ft</p>
-                        <p>Long Range: 60 ft</p>
-                    </ul>
-                </div>
-                <div class="compact-container">
-                    <h3>Attack Rolls</h3>
-                    <p>Rapier 1d20 + DEX modifier + Proficiency bonus</p>
-                    <p>Shortbow 1d20 + DEX modifier + Proficiency bonus</p>
-                    <p>Dagger 1d20 + DEX modifier + Proficiency bonus</p>
-                </div>
-                <div class="compact-container">
-                    <h3>Damage Rolls</h3>
-                    <p>Rapier 1d8 + DEX modifier - Sneak attack damage can be applied</p> 
-                    <p>Shortbow 1d6 + DEX modifier - Sneak attack damage can be applied</p>
-                    <p>Dagger 1d4 + DEX modifier - Sneak attack damage can be applied</p>
-                </div>
-            </section>
-            <h3>Equipment</h3>
-            <section class="horizontal-display">
-                <div class="compact-container">
-                    <h3>Equipment</h3>
-                    <button class="compact-button" onclick="">Burglar's Pack</button>
-                    <button class="compact-button" onclick="">Leather Armor</button>
-                    <button class="compact-button" onclick="">Thieves' Tools</button>
-            </section>
-        </main>
-    </body>
+            </div>
+            <div class="second-level-div">
+                <h3>Shortbow (Ranged Weapon)</h3>
+                <div><strong>Attack Roll:</strong> Roll a d20 and add your Dexterity modifier (+5). Add your proficiency bonus (+3) if proficient. Compare the result to the target's AC. If it equals or exceeds the target’s AC, the attack hits.</div>
+                <div"><strong>Damage Roll:</strong> On a hit, roll 1d6 for damage and add your Dexterity modifier (+5). </div>
+            </div>
+
+            <div class="second-level-div">
+                <h3>Daggers (Thrown Weapon)</h3>
+                <div><strong>Attack Roll:</strong> Roll a d20 and add your Dexterity modifier (+5). Add your proficiency bonus (+3) if proficient. Compare the result to the target's AC. If it equals or exceeds the target’s AC, the attack hits.</div>
+                <div><strong>Damage Roll:</strong> On a hit, roll 1d4 for damage and add your Dexterity modifier (+5). You can throw a dagger within range (20 ft. normal, 60 ft. long range). </div>
+            </div>
+
+            <div class="second-level-div">
+                <h3>Sneak Attack</h3>
+                <div><strong>Sneak Attack:</strong> If you have advantage on the attack roll or an ally is within 5 feet of the target and not incapacitated, you can apply your Sneak Attack, adding 3d6 to the total</div>
+            </div>
+        </section>
+
+    <!-- Skill Checks Section -->
+    <section>
+        <h2>Skill Checks:</h2>
+        <div>
+            <p>For each skill check, roll a d20 and add the appropriate modifiers. Proficiency bonus is added if you are proficient in the skill, and Expertise adds double your proficiency bonus if applicable.</p>
+    
+            <table>
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Ability</th>
+                        <th>Modifier</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acrobatics</td>
+                        <td>DEX</td>
+                        <td>+8 (DEX +5, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Animal Handling</td>
+                        <td>WIS</td>
+                        <td>+3 (WIS +0, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Arcana</td>
+                        <td>INT</td>
+                        <td>+4 (INT +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Athletics</td>
+                        <td>STR</td>
+                        <td>+2 (STR -1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Deception</td>
+                        <td>CHA</td>
+                        <td>+4 (CHA +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>INT</td>
+                        <td>+4 (INT +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Insight</td>
+                        <td>WIS</td>
+                        <td>+3 (WIS +0, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Intimidation</td>
+                        <td>CHA</td>
+                        <td>+4 (CHA +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Medicine</td>
+                        <td>WIS</td>
+                        <td>+3 (WIS +0, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Nature</td>
+                        <td>INT</td>
+                        <td>+4 (INT +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Perception</td>
+                        <td>WIS</td>
+                        <td>+5 (WIS +0, Proficiency +3, Expertise +2)</td>
+                    </tr>
+                    <tr>
+                        <td>Performance</td>
+                        <td>CHA</td>
+                        <td>+4 (CHA +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Persuasion</td>
+                        <td>CHA</td>
+                        <td>+4 (CHA +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Religion</td>
+                        <td>INT</td>
+                        <td>+4 (INT +1, Proficiency +3)</td>
+                    </tr>
+                    <tr>
+                        <td>Sleight of Hand</td>
+                        <td>DEX</td>
+                        <td>+8 (DEX +5, Proficiency +3, Expertise +2)</td>
+                    </tr>
+                    <tr>
+                        <td>Stealth</td>
+                        <td>DEX</td>
+                        <td>+8 (DEX +5, Proficiency +3, Expertise +2)</td>
+                    </tr>
+                    <tr>
+                        <td>Survival</td>
+                        <td>WIS</td>
+                        <td>+3 (WIS +0, Proficiency +3)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Things to Remember During Attacking Section -->
+    <section>
+        <h2>Things to Remember During Attacking:</h2>
+            <div class="second-level-div">
+                <h3>Did I Hit?</h3>
+                <p><strong>Roll a d20:</strong> To determine if you hit the target, roll a d20 and add your attack modifier (based on Strength or Dexterity, depending on the weapon). If you're proficient with the weapon, add your proficiency bonus.</p>
+                <p><strong>Compare the Result to the Target's Armor Class (AC):</strong> If your roll meets or exceeds the AC, you hit.</p>
+            </div>
+            <div class="second-level-div">
+                <h3>How Much Damage?</h3>
+                <p>If you hit, roll the weapon's damage dice and add any relevant modifiers. For example, if your weapon deals 1d6 damage and your Dexterity modifier is +5, you add +5 to the roll.</p>
+            </div>
+            <div class="second-level-div">
+                <h3>Sneak Attacks</h3>
+                <p>If you have advantage on the attack or an ally is within 5 feet of the target, you can apply your Sneak Attack damage (3d6 at Level 5). This is added to the regular weapon damage.</p>
+            </div>
+            <div class="second-level-div">
+                <h3>Uncanny Dodge</h3>
+                <p>If you are hit by an attack that you can see, you can use your reaction to halve the damage.</p>
+            </div>
+            <div class="second-level-div">
+                <h3>Crits</h3>
+                <p>If you roll a natural 20 on the attack roll, you score a critical hit. When you score a critical hit, roll the damage dice twice and then add any modifiers.</p>
+            </div>
+            <div class="second-level-div">
+                <h3>Two-Weapon Fighting</h3>
+                <p>If you're wielding two light weapons, you can use your bonus action to make an attack with your off-hand weapon. You don’t add your modifier to the off-hand weapon damage, except for your Dexterity modifier.</p>
+            </div>
+            <div class="second-level-div">
+                <h3>Opportunity Attacks</h3>
+                <p>When a hostile creature you can see moves out of your reach, you can use your reaction to make an opportunity attack against that creature.</p>
+            </div>
+            <div class="second-level-div">
+                <h3> Ranged Attacks</h3>
+                <p>When making a ranged attack, make sure you're within the weapon's range (normal or long range) and that there is nothing obstructing your line of sight.</p>
+            </div>
+    </section>
+
+    <!-- Notes Section -->
+    <section class="notes">
+        <h3>Notes:</h3>
+        <ul>
+            <li>Ensure all skills, abilities, and features are noted down for easy reference.</li>
+            <li>Keep track of any special effects, like the benefits of your "Halfling Luck" or "Lucky" feature.</li>
+        </ul>
+    </section>
+
+</body>
 </html>
