@@ -239,3 +239,35 @@ main {
     flex-direction: column;
     justify-content: flex-start; /* Ensure content starts from the top */
 }
+
+.quarter-display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 10px; /* Gap between the grid items */
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.quarter-display .compact-container {
+    margin: 0; /* Remove extra margin */
+}
+
+.quarter-display h2 {
+    text-align: center; /* Center the title */
+    align-self: flex-start; /* Align the title to the top */
+    width: 100%; /* Ensure the title takes up the full width */
+    margin-top: 0; /* Remove top margin */
+    padding-top: 10px; /* Add padding to the top */
+}
+
+.vertical-display {
+    display: flex;
+    flex-direction: column; /* Display items in a vertical layout */
+    align-items: stretch; /* Ensure items stretch to the same width */
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.vertical-display .compact-container {
+    margin: 10px 0; /* Add margin between the containers */
+}
