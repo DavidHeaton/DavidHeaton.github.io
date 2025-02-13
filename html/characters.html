@@ -3,29 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finn Underbough - Level 6 Rogue</title>
+    <title>Characters</title>
     <link rel="stylesheet" href="../../css/styles.css">
-    <script src="../../js/characters.js" defer></script>
-    <script src="../../js/loadCharacters.js" defer></script>
+    <script type="module">
+        import {CharacterLoader} from '../js/info.js';
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = new CharacterLoader('../data/characters.json');
+            loader.loadCharacter('finn', 'details-basic');
+        });
+    </script>
 </head>
-    <header id=>
-        <button id="home-button" onclick="window.location.href='../../index.html'">
-            <img src="../images/home-white.ico" alt="Home Icon">
-        </button>
-        <select id="character-select-dropdown">
-            <!-- Options will be populated dymaically-->
-        </select>
-    </header>
     <body>
+        <header>
+                <button class="top-item" onclick="window.location.href='../index.html'">
+                    <img src="../images/home-white.ico" alt="Home" class="icon">
+                </button>
+                <h1 class="boxed-h1">Arctrect's D&D</h1>
+        </header>
+        <main>
+            <div class=character-info id="details-basic"></div>
+        </main>
+        <footer>
+                <p class="boxed-paragraph-full-width">David Heaton 2025</p>
+        </footer>
+        <!--
         <div id="heading-container"></div>
         <div id="basic-info-container"></div>
         <div id="ability-container"></div>
         <div id="hitpoint-container"></div> 
         <div id="proficiency-bonus-container"></div>
         <div id="initiative-container"></div>
-        <div id="proficiency-list-container"></div>
-        <div id="armour-and-weapons-container"></div>
-        <!--
+        <div id="weapons-container"></div>
+        <div id="equipment-armour-container"></div>
+        <div id="equipment-weapons-container"></div>
+        <div id="equipment-other-container"></div>
         <div id="armour-class-container"></div>
         <div id="saving-throws-container"></div>
         <div id="skills-container"></div>
@@ -37,6 +48,5 @@
         <div id="attacking-tips-container"></div>
         <div id="rogue-advancement-container"></div>
     -->
-        </script>
-    </body>
+</body>
 </html>
