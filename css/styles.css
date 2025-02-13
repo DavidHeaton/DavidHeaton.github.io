@@ -276,7 +276,10 @@ button:active {
 
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        background-size: auto;
+    }
 
     .stats-list p {
         flex: 1 1 calc (100% - 20px);

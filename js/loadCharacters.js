@@ -33,7 +33,7 @@ function loadCharacter(characterKey) {
     document.getElementById('proficiency-bonus-container').innerHTML = '';
     document.getElementById('initiative-container').innerHTML = '';
 
-    // Load Header Section ==================================================================
+    // Load Heading Section ==================================================================
     // Get the heading section in the main html file
     const headingSection = document.getElementById('heading-container');
     headingSection.innerHTML = ''; // Clear existing content
@@ -47,26 +47,38 @@ function loadCharacter(characterKey) {
     headingSection.appendChild(heading);
 
     // Create an image element for the character image
-    const headingImage = document.createElement('img');
-    headingImage.classList.add('character-image-large');
-    headingImage.src = character.image;
-    headingImage.alt = `${character.name}`;
-    headingSection.appendChild(headingImage);
+    // Only add content if there is an image
+    if (character.image) {
+        const headingImage = document.createElement('img');
+        headingImage.classList.add('character-image-large');
+        headingImage.src = character.image;
+        headingImage.alt = `${character.name}`;
+        headingSection.appendChild(headingImage);
+    }
 
     // Create a paragraph element for the character level and append it to heading section
-    const characterDetails = document.createElement('p');
-    characterDetails.innerHTML = `<strong>Level:</strong> ${character.level}`;
-    headingSection.appendChild(characterDetails);
+    // Only add content if there is a level
+    if (character.level) {
+        const characterLevel = document.createElement('p');
+        characterLevel.innerHTML = `<strong>Level:</strong> ${character.level}`;
+        headingSection.appendChild(characterLevel);
+    }
 
     // Create a paragraph element for the Class and append it to heading section
-    const characterClass = document.createElement('p');
-    characterClass.innerHTML = `<strong>Class:</strong> ${character.class}`;
-    headingSection.appendChild(characterClass);
+    // Only add content if there is a class
+    if (character.class) {
+        const characterClass = document.createElement('p');
+        characterClass.innerHTML = `<strong>Class:</strong> ${character.class}`;
+        headingSection.appendChild(characterClass);
+    }
 
     // Create a paragraph element for the Subclass and append it to heading section
-    const characterSubClass = document.createElement('p');
-    characterSubClass.innerHTML = `<strong>Backgound:</strong> ${character.subClass}`;
-    headingSection.appendChild(characterSubClass);
+    // Only add content if there is a subclass
+    if (character.subClass) {
+        const characterSubClass = document.createElement('p');
+        characterSubClass.innerHTML = `<strong>Backgound:</strong> ${character.subClass}`;
+        headingSection.appendChild(characterSubClass);
+    }
 
     // Load Basic Details Section ===========================================================
     // Get the basic info container in the main html file
@@ -215,6 +227,29 @@ function loadCharacter(characterKey) {
     const proficiencyBonus = document.createElement('p');
     proficiencyBonus.innerHTML = `${character.proficiencyBonus}`;
     proficiencyBonusContainer.appendChild(proficiencyBonus);
+
+    // Create a new stats-list container for the list of proficiencies
+    const proficiencyListContainer = document.createElement('div');
+    proficiencyListContainer.classList.add('stats-list');
+    proficiencyBonusContainer.appendChild(proficiencyListContainer);
+
+
+    // remove the border from this container
+    proficiencyListContainer.style.border = 'none';
+
+    // Add content to the proficiency list container
+    // Create a h2 heading for the container
+    const proficiencyListHeading = document.createElement('h2');
+    proficiencyListHeading.textContent = 'Proficiencies';
+    proficiencyListContainer.appendChild(proficiencyListHeading);
+
+    character.proficiencies.forEach(proficiency => {
+        const proficiencyItem = document.createElement('p');
+        proficiencyItem.innerHTML = proficiency;
+        proficiencyListContainer.appendChild(proficiencyItem);
+    });
+
+
 
     // Initiative Section ====================================================================
     // Get the initiative container in the main html file

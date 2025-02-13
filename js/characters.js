@@ -72,7 +72,6 @@ const characters = {
         name: 'Nyxis',
         level: 6,
         class: 'Warlock',
-        image: '../../images/NyxisImage.png',
         abilityScores: {
             strength: 10,
             dexterity: 14,
