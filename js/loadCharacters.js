@@ -32,6 +32,7 @@ function loadCharacter(characterKey) {
     document.getElementById('hitpoint-container').innerHTML = '';
     document.getElementById('proficiency-bonus-container').innerHTML = '';
     document.getElementById('initiative-container').innerHTML = '';
+    document.getElementById('armour-and-weapons-container').innerHTML = '';
 
     // Load Heading Section ==================================================================
     // Get the heading section in the main html file
@@ -272,4 +273,96 @@ function loadCharacter(characterKey) {
     const initiativeParagraph = document.createElement('p');
     initiativeParagraph.innerHTML = `${initiative}`;
     initiativeContainer.appendChild(initiativeParagraph);
+
+    // Armour and Weapons Section ====================================================================
+    // Get the armour and weapons container in the main html file
+    const armourAndWeaponsContainer = document.getElementById('armour-and-weapons-container');
+    // Set the class of the container
+    armourAndWeaponsContainer.classList.add('stats-list');
+
+    // Create a new h2 element for the heading and append it to armour and weapons container
+    const armourAndWeaponsHeading = document.createElement('h2');
+    armourAndWeaponsHeading.textContent = 'Armour and Weapons';
+    armourAndWeaponsContainer.appendChild(armourAndWeaponsHeading);
+
+    // Create a new stats-list container for the list of weapons
+    const weaponsListContainer = document.createElement('div');
+    weaponsListContainer.classList.add('stats-list');
+    armourAndWeaponsContainer.appendChild(weaponsListContainer);
+
+    // Create a h2 heading for the container
+    const weaponsListHeading = document.createElement('h2');
+    weaponsListHeading.textContent = 'Weapons';
+    weaponsListContainer.appendChild(weaponsListHeading);
+    // Remove the border from this container
+    weaponsListContainer.style.border = 'none';
+
+    // For each weapon in equipment.weapons, create a paragraph element and append it to weapons list container
+    character.equipment.weapons.forEach(weapon => {
+        const weaponItem = document.createElement('p');
+        weaponItem.innerHTML = weapon;
+        weaponsListContainer.appendChild(weaponItem);
+    });
+
+    // Create a new stats-list container for the list of armour
+    const armourListContainer = document.createElement('div');
+    armourListContainer.classList.add('stats-list');
+    armourAndWeaponsContainer.appendChild(armourListContainer);
+
+    // Create a h2 heading for the container
+    const armourListHeading = document.createElement('h2');
+    armourListHeading.textContent = 'Armour';
+    armourListContainer.appendChild(armourListHeading);
+
+    // Remove the border from this container
+    armourListContainer.style.border = 'none';
+
+    // For each armour in equipment.armour, create a paragraph element and append it to armour list container
+    character.equipment.armour.forEach(armour => {
+        const armourItem = document.createElement('p');
+        armourItem.innerHTML = armour;
+        armourListContainer.appendChild(armourItem);
+    });
+
+    // Create a new stats-list container for the list of ammunition
+    const ammunitionListContainer = document.createElement('div');
+    ammunitionListContainer.classList.add('stats-list');
+    armourAndWeaponsContainer.appendChild(ammunitionListContainer);
+    // Remove the border from this container
+    ammunitionListContainer.style.border = 'none';
+
+    // Create a h2 heading for the container
+    const ammunitionListHeading = document.createElement('h2');
+    ammunitionListHeading.textContent = 'Ammunition';
+    ammunitionListContainer.appendChild(ammunitionListHeading);
+
+    // For each item in equipment.ammunition, create a paragraph element and append it to ammunition list container
+    character.equipment.ammunition.forEach(ammunition => {
+        const ammunitionItem = document.createElement('p');
+        ammunitionItem.innerHTML = ammunition;
+        ammunitionListContainer.appendChild(ammunitionItem);
+    });
+
+    // Create a new stats-list container for the list of other equipment
+    const otherListContainer = document.createElement('div');
+    otherListContainer.classList.add('stats-list');
+    armourAndWeaponsContainer.appendChild(otherListContainer);
+
+    // Create a h2 heading for this container
+    const otherListHeading = document.createElement('h2');
+    otherListHeading.textContent = 'Other Equipment';
+    otherListContainer.appendChild(otherListHeading);
+
+    // Remove the border from this container
+    otherListContainer.style.border = 'none';
+
+    // For each other item in equipment.other, create a paragraph element and append it to other equipment list container
+    character.equipment.other.forEach(other => {
+        const otherItem = document.createElement('p');
+        otherItem.innerHTML = other;
+        otherListContainer.appendChild(otherItem);
+    })
+
+
+
 }
