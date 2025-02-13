@@ -8,11 +8,19 @@
     <script src="../../js/characters.js" defer></script>
     <script src="../../js/loadCharacters.js" defer></script>
 </head>
+    <header id=>
+        <select id="character-select-dropdown">
+            <!-- Options will be populated dymaically-->
+        </select>
+    </header>
     <body>
         <div id="heading-container"></div>
         <div id="basic-info-container"></div>
         <div id="ability-container"></div>
         <div id="hitpoint-container"></div> 
+        <div id="proficiency-bonus-container"></div>
+        <div id="initiative-container"></div>
+        <div id="proficiency-list-container"></div>
         <!--
         <div id="proficiency-container"></div>
         <div id="initiative-container"></div>
@@ -27,11 +35,6 @@
         <div id="attacking-tips-container"></div>
         <div id="rogue-advancement-container"></div>
     -->
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                loadCharacter('finn'); // Specify the character to load
-            });
         </script>
     </body>
 </html>

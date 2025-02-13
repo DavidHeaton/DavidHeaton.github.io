@@ -1,8 +1,37 @@
 document.addEventListener("DOMContentLoaded", function() {
+    loadCharacter('finn');
+    populateCharacterDropdown();
 });
+
+// Function to populate dropdown for character selection
+function populateCharacterDropdown() {
+    // Get the dropdown container from the main html file
+    const characterSelect = document.getElementById('character-select-dropdown');
+    characterSelect.innerHTML = ''; // Clear existing content
+
+    Object.keys(characters).forEach(characterKey => {
+        const option = document.createElement('option');
+        option.value = characterKey;
+        option.textContent = characters[characterKey].name;
+        characterSelect.appendChild(option);
+    });
+
+    characterSelect.addEventListener('change', function() {
+        loadCharacter(this.value);
+    });
+}
+
 
 function loadCharacter(characterKey) {
     const character = characters[characterKey];
+
+    // Clear existing content in all sections
+    document.getElementById('heading-container').innerHTML = '';
+    document.getElementById('basic-info-container').innerHTML = '';
+    document.getElementById('ability-container').innerHTML = '';
+    document.getElementById('hitpoint-container').innerHTML = '';
+    document.getElementById('proficiency-bonus-container').innerHTML = '';
+    document.getElementById('initiative-container').innerHTML = '';
 
     // Load Header Section ==================================================================
     // Get the heading section in the main html file
@@ -163,4 +192,49 @@ function loadCharacter(characterKey) {
     hitPointsContainer.appendChild(createHitPointsFeild('Current', character.hitPoints.current));
     hitPointsContainer.appendChild(createHitPointsFeild('Max', character.hitPoints.max));  
     hitPointsContainer.appendChild(createHitPointsFeild('Temp', character.hitPoints.temporary));
+
+    // Proficiency Bonus Section ====================================================================
+
+    // Get the proficiency bonus container in the main html file
+    const proficiencyBonusContainer = document.getElementById('proficiency-bonus-container');
+    // Set the class of the container
+    proficiencyBonusContainer.classList.add('stats-list');
+    
+    // Create a new h2 element for the heading and append it to proficiency bonus container
+    const proficiencyBonusHeading = document.createElement('h2');
+    proficiencyBonusHeading.textContent = 'Proficiency Bonus';
+    proficiencyBonusContainer.appendChild(proficiencyBonusHeading);
+
+    // Calculate the proficiency bonus
+    character.proficiencyBonus = Math.ceil(character.level / 4) + 1;
+
+    // Append a + for positive values and a - for negative values
+    character.proficiencyBonus = character.proficiencyBonus >= 1 ? `+${character.proficiencyBonus}` : `-${character.proficiency}`;
+
+    // Create a paragraph element for the proficiency bonus and append it to proficiency bonus container
+    const proficiencyBonus = document.createElement('p');
+    proficiencyBonus.innerHTML = `${character.proficiencyBonus}`;
+    proficiencyBonusContainer.appendChild(proficiencyBonus);
+
+    // Initiative Section ====================================================================
+    // Get the initiative container in the main html file
+    const initiativeContainer = document.getElementById('initiative-container');
+    // Set the class of the container
+    initiativeContainer.classList.add('stats-list');
+
+    // Create a new h2 element for the heading and append it to initiative container
+    const initiativeHeading = document.createElement('h2');
+    initiativeHeading.textContent = 'Initiative';
+    initiativeContainer.appendChild(initiativeHeading);
+
+    // Calculate the initiative by finding the modifier for dexterity
+    initiative = Math.floor((character.abilityScores.dexterity - 10) / 2);
+
+    // Append a + for positive values and a - for negative values
+    initiative = initiative >= 1 ? `+${initiative}` : `-${initiative}`;
+
+    // Create a paragraph element for the initiative and append it to initiative container
+    const initiativeParagraph = document.createElement('p');
+    initiativeParagraph.innerHTML = `${initiative}`;
+    initiativeContainer.appendChild(initiativeParagraph);
 }
