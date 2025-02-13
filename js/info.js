@@ -14,9 +14,11 @@ export class Character {
         this.initiative = data.initiative;
         this.armourClass = data.armourClass;
         this.hitPoints = data.hitPoints;
+        this.hitPointsNames = data.hitPointsNames;
         this.proficiencies = data.proficiencies;
         this.expertise = data.expertise;
         this.savingThrows = data.savingThrows;
+        this.savingThrowsNames = data.savingThrowsNames;
         this.skills = data.skills;
         this.skillsNames = data.skillsNames;
         this.racialTraits = data.racialTraits;
@@ -121,7 +123,7 @@ export class Character {
                 const row = hitPointsTable.insertRow();
                 const cell1 = row.insertCell();
                 const cell2 = row.insertCell();
-                cell1.textContent = key;
+                cell1.textContent = this.hitPointsNames[key];
                 cell2.textContent = value;
             }
 
@@ -158,7 +160,7 @@ export class Character {
                 cell2.textContent = value;
                 // Calculate the modifier
                 const modifier = Math.floor((value - 10) / 2);
-                cell3.textContent = modifier >= 0 ? `+${modifier}` : modifier;
+                cell3.textContent = modifier > 0 ? `+${modifier}` : modifier;
             }
 
             // Create new div for Skill Scores
@@ -187,7 +189,7 @@ export class Character {
                 const cell1 = row.insertCell();
                 const cell2 = row.insertCell();
                 cell1.textContent = this.skillsNames[key];
-                cell2.textContent = value >= 0 ? `+${value}` : value;
+                cell2.textContent = value > 0 ? `+${value}` : value;
             }
 
             // Creata a new div for saving throws
@@ -214,8 +216,8 @@ export class Character {
                 const row = savingThrowsTable.insertRow();
                 const cell1 = row.insertCell();
                 const cell2 = row.insertCell();
-                cell1.textContent = this.abilityNames[key];
-                cell2.textContent = value >= 0 ? `+${value}` : value;
+                cell1.textContent = this.savingThrowsNames[key];
+                cell2.textContent = value > 0 ? `+${value}` : value;
             }
             
 

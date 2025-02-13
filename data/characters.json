@@ -34,6 +34,11 @@
             "max": 43,
             "temporary": 0
         },
+        "hitPointsNames": {
+            "current": "Current",
+            "max": "Max",
+            "temporary": "Temporary"
+        },
         "proficiencies": ["Dexterity", "Intelligence", "Investigation", "Thief's Tools"],
         "expertise": ["Stealth", "Perception", "Sleight of Hand", "Acrobatics"],
         "savingThrows": {
