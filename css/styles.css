@@ -54,6 +54,11 @@ table {
 /*************************************************************************************************************************************/
 /*************************************************************************************************************************************/
 
+/* General Styles */
+html, body {
+    height: 100%;
+}
+
 /* Header Styles */
 header {
     background-color: #345a2f; /* Dark background */
@@ -249,7 +254,7 @@ button:active {
     font-size: .75rem;
 }
 
-.hitpoints-fiels strong {
+.hitpoints-field strong {
     margin-right: 5px;
 }
 
